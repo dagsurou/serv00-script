@@ -25,59 +25,7 @@ jobs:
 
       - name: 执行Python脚本恢复vless服务并发送Telegram消息
         env:
-          ACCOUNTS_JSON: ${{ [
-    {
-        "host": "s7.serv00.com/",
-        "port": 22,
-        "username": "surou",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s7.serv00.com",
-        "port": 22,
-        "username": "junjun",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s7.serv00.com",
-        "port": 22,
-        "username": "zhoupu",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s7.serv00.com",
-        "port": 22,
-        "username": "junzhao",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s8.serv00.com",
-        "port": 22,
-        "username": "zhaoyao",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s8.serv00.com",
-        "port": 22,
-        "username": "bbaa",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s9.serv00.com",
-        "port": 22,
-        "username": "junqin",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s9.serv00.com",
-        "port": 22,
-        "username": "puzhou",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s1.ct8.pl",
-        "port": 22,
-        "username": "sunzhao",
-        "password": "zhao670828@Jun"
-    },{
-        "host": "s1.ct8.pl",
-        "port": 22,
-        "username": "pipi",
-        "password": "zhao670828@Jun"
-    }
-] }}
+          ACCOUNTS_JSON: ${{ secrets.ACCOUNTS_JSON }}
           TELEGRAM_TOKEN: ${{ 7072732946:AAEogQ89dHM-0zLnYkCZM7GI3V7S10NJPdc }}
           TELEGRAM_CHAT_ID: ${{ 5009478591 }}
         run: |
